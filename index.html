@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: bisque;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="sosa"></div>
+  </div>
+  <script>
+    const sosa = document.getElementById('sosa')
+    console.log(sosa);
+    sosa.style.width = "100px";
+    sosa.style.height = "100px";
+    sosa.style.backgroundColor = "black";
+    sosa.style.position = "absolute";
+    sosa.style.top = "100px";
+    sosa.style.left = "100px";
+
+    let mingoo = 0;
+    setInterval(function() {
+      mingoo++;
+      sosa.style.top = mingoo +'px';
+      sosa.style.left = mingoo + 'px';
+    }, 60)
+    // 엄청나게 빠른 속도로 결정이 나는 것/
+
+  </script>
+</body>
+</html>
