@@ -15,6 +15,9 @@
       height: 100vh;
       background-color: bisque;
     }
+    #sosa {
+      border-radius: 50px;
+    }
   </style>
 </head>
 <body>
@@ -32,13 +35,20 @@
     sosa.style.left = "100px";
 
     let mingoo = 0;
-    setInterval(function() {
+    let interval = setInterval(function() {
       mingoo++;
       sosa.style.top = mingoo +'px';
-      sosa.style.left = mingoo + 'px';
-    }, 60)
-    // 엄청나게 빠른 속도로 결정이 나는 것/
-
-  </script>
+        if(mingoo === 831) {
+          clearInterval(interval);
+        }
+      },20)
+    let moongi = 0;
+      setInterval(function() {
+        sosa.style.bottom = moongi +'px'
+        moongi++;
+      },20)
+    // 문제점 발생 clearInterval 이후 다음함수가 진행되지 않는점
+    
+    </script>
 </body>
 </html>
