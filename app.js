@@ -14,12 +14,17 @@
 //* setTimeout은 콜백형식이 아니면 순서대로 진행을 할 수 없음/
 //* 내가 엔진이라면 setTimeout을 보고 초보고 실행문 순서대로/
 
-function sosa() {
-  setTimeout(function() {
-    sosa();
-    console.log('약오르지?')
-  }, 1000)
-};
+// function sosa() {
+//   setTimeout(function() {
+//     sosa();
+//     console.log('약오르지?')
+//   }, 1000)
+// };
 
-sosa();
-//* 재귀함수 /
+// sosa();
+// //* 재귀함수 /
+
+setInterval(function() {}, 1000);
+setInterval(function() {
+  console.log("뭉기 이따 향마루??")
+}, 1000);
